@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Arietti Gabriela">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <title>Bienvenidos entrenadores!</title>
+</head>
+<body>
+    <h1>TU VIAJE POKEMON EMPIEZA ACÁ!</h1>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container" method="post">
+            <form action="./public/php/register.php" method="post">
+                <h2>Crear una cuenta</h2>
+                <input type="text" placeholder="Usuario" name="usernew" required />
+                <input type="email" placeholder="Email" name="mailnew" required />
+                <input type="password" placeholder="Contraseña" name="passnew" required />
+                <input type="submit" class="buttonform" id="open" value="Registrarme">
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="./public/php/form.php" method="post">
+                <h2>Ingresá a tu cuenta</h2>
+                <input type="text" placeholder="Usuario" name="user" required />
+                <input type="password" placeholder="Contraseña" name="pass" required />
+                <a href="#">Olvidaste tu contraseña?</a>
+                <input type="submit" class="buttonform" id="login" value="Ingresar">
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h2>Que bueno verte de nuevo!</h2>
+                    <p>Listo para continuar tu aventura?</p>
+                    <button class="ghost" id="signIn">Ingresar</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h2>Bienvenido entrenador!</h2>
+                    <p>Completa tus datos y empezá tu viaje pokemon!</p>
+                    <button class="ghost" id="signUp">registrarme</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-wrong" id="wrong">
+        <div class="popup">
+            <img src="./public/img/Psyduck01.png" alt="Pokemon Psyduck agarrandose la cabeza">
+            <div class="texto-popup">
+                <h2>PSY-AY-AY</h2>
+                <h3>Parece que los datos ingresados no son correctos</h3>
+                <button class="boton-popup" id="again">Intentar de nuevo</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup-reg" id="correct">
+        <div class="popup">
+            <div class="texto-popup">
+                <h2>¡Todo Listo!</h2>
+                <h3>Ya podemos empezar nuestro camino Pokemon!</h3>
+                <button class="boton-popup" id="done">Iniciar sesión</button>
+            </div>
+            <img src="./public/img/Vulpix02.png" alt="Pokemon Vulpix sentado">
+        </div>
+    </div>
+    <script src="./public/js/script.js"></script>
+</body>
+</html>
